@@ -3,8 +3,13 @@ package com.tnsif.jpaintro;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
 
 @Entity
+@NamedQueries(
+@NamedQuery(name="getAllBooks" , query="SELECT b from Book b")		)
+
 public class Book {
 	@Id
 	private int bookId;
